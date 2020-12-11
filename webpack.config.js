@@ -17,13 +17,22 @@ module.exports = {
         use:{
           loader: "babel-loader"
         }
+      },
+      {
+        test: /\.css/,
+        use:
+           [
+            "style-loader",
+            "css-loader"
+          ]
       }
     ]
   },
   devServer:{
     contentBase: dist,
     port: 3000,
-    hot:true
+    hot:true,
+    open:true
   },
   plugins: [
     new HtmlWebpackPlugin({

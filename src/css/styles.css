@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after{
+  margin:0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html{
+  box-sizing: content-box;
+  font-size: 10px;
+}
+ul{
+  list-style: none;
+}
+#root{
+  position: relative;
+  height: 100vh;
+}
+.movie{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 95%;
+  gap:2rem;
+  padding: 0 2.5%;
+}
+.movie_info{
+  flex-basis: calc(calc(30rem - 100%)*999);
+  flex-grow: 1;
+  padding: 1.2rem;
+  text-align: center;
+  line-height: 5rem;
+  border-radius: 1.2rem;
+  display: inline-block;
+  box-shadow: 1px 1px 8px 3px rgba(0, 9, 5, 0.5);
+}
+.movie_info img{
+  box-shadow: 1px 1px 4px 5px rgba(0, 2, 4, 0.5);
+  border-radius: .5rem;
+}
+.movie_info span{
+  font-size: 1.5rem;
+}
+.movie_info h1{
+  font-size: 3.6rem;
+}
